@@ -22,7 +22,8 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'primary-color': '#F85559',
+                        'secondary-color': '#12121299',
                     }
                 }
             }
@@ -78,40 +79,88 @@
         </nav>
         <!-- navbar ends here -->
         <!-- carousel or slider starts here -->
-        <section>
+        <section class="relative">
             <div class="carousel w-full lg:h-[680px]">
                 <div id="slide1" class="carousel-item relative w-full">
-                    <img src="./images/banner1.png" class="w-full" />
-                    
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <img src="./images/banner1.png" class="brightness-75 w-full" />
+                    <div
+                        class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide4" class="btn btn-circle">❮</a>
+                        <div class="text-white text-center max-w-[680px]  space-y-1 md:space-y-3">
+                            <h1 class="text-xl md:text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="text-sm md:text-xl">We supply highly quality organic products</p>
+                            <button class="btn bg-primary-color text-white border-none">Shop Now</button>
+                        </div>
                         <a href="#slide2" class="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide2" class="carousel-item relative w-full">
-                    <img src="./images/banner2.png" class="w-full" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <img src="./images/banner2.png" class="brightness-75 w-full" />
+                    <div
+                        class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" class="btn btn-circle">❮</a>
+                        <div class="text-white text-center max-w-[680px]  space-y-1 md:space-y-3">
+                            <h1 class="text-xl md:text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="text-sm md:text-xl">We supply highly quality organic products</p>
+                            <button class="btn bg-primary-color text-white border-none">Shop Now</button>
+                        </div>
                         <a href="#slide3" class="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide3" class="carousel-item relative w-full">
-                    <img src="./images/banner3.png" class="w-full" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <img src="./images/banner3.png" class="brightness-75 w-full" />
+                    <div
+                        class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" class="btn btn-circle">❮</a>
+                        <div class="text-white text-center max-w-[680px]  space-y-1 md:space-y-3">
+                            <h1 class="text-xl md:text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="text-sm md:text-xl">We supply highly quality organic products</p>
+                            <button class="btn bg-primary-color text-white border-none">Shop Now</button>
+                        </div>
                         <a href="#slide4" class="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide4" class="carousel-item relative w-full">
-                    <img src="./images/banner4.png" class="w-full" />
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <img src="./images/banner4.png" class="brightness-75 w-full" />
+                    <div
+                        class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" class="btn btn-circle">❮</a>
+                        <div class="text-white text-center max-w-[680px]  space-y-1 md:space-y-3">
+                            <h1 class="text-xl md:text-3xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="text-sm md:text-xl">We supply highly quality organic products</p>
+                            <button class="btn bg-primary-color text-white border-none">Shop Now</button>
+                        </div>
                         <a href="#slide1" class="btn btn-circle">❯</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- carousel or slider ends here -->
+        <!-- various fruits starts here -->
+        <section class="absolute bottom-20 left-80 sm:hidden md:hidden">
+            <div class="flex justify-evenly items-center h-56 w-[1280px] mx-auto bg-white shadow-md rounded-lg">
+                <div class=" text-center space-y-2">
+                    <img src="./images/fruit1.png" alt="">
+                    <p class="text-gray-700 text-lg">Black grapes</p>
+                </div>
+                <div class=" text-center space-y-2">
+                    <img src="./images/fruit2.png" alt="">
+                    <p class="text-gray-700 text-lg">Orange</p>
+                </div>
+                <div class=" text-center space-y-2">
+                    <img src="./images/fruit3.png" alt="">
+                    <p class="text-gray-700 text-lg">Mango</p>
+                </div>
+                <div class=" text-center space-y-2">
+                    <img src="./images/fruit4.png" alt="">
+                    <p class="text-gray-700 text-lg">Strawberry</p>
+                </div>
+                <div class=" text-center space-y-2">
+                    <img src="./images/fruit5.png" alt="">
+                    <p class="text-gray-700 text-lg">Pomegranate</p>
+                </div>
+            </div>
+        </section>
     </header>
 
 </body>
