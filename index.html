@@ -38,42 +38,67 @@
 <body class="font-lato">
     <header class="container mx-auto">
         <!-- Navbar starts here -->
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li><a>About Us</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
-                        </ul>
-                    </div>
+        <nav class="lg:bg-primary-color h-[100px] py-5 lg:rounded-full px-5 my-5 lg:my-10">
+            <!-- mobile device -->
+            <div class="lg:hidden flex justify-between items-center">
+                <div class="flex gap-2 items-center">
+                    <img src="./images/logo.png" alt="">
+                    <h3 class="text-xl md:text-4xl font-bold">Fruit Burst</h3>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                        <li>
+                            <div class="flex items-center bg-white text-black rounded-full px-5">
+                                <input type="text" placeholder="Search"
+                                    class="input focus:outline-none rounded-full w-24 lg:w-auto" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Desktop -->
+            <div class="hidden lg:flex justify-between items-center text-white">
+                <div class="flex">
                     <div class="hidden lg:flex gap-2 items-center">
                         <ul class="menu menu-horizontal px-1">
-                            <li><a>Home</a></li>
-                            <li><a>About Us</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
+                            <li><a class="text-lg">Home</a></li>
+                            <li><a class="text-lg">About Us</a></li>
+                            <li><a class="text-lg">Shop</a></li>
+                            <li><a class="text-lg">All Fruits</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="navbar-center">
+                <div class="flex">
                     <div class="flex gap-2 items-center">
                         <img src="./images/logo.png" alt="">
-                        <h3 class="text-lg font-bold">Fruit Burst</h3>
+                        <h3 class="text-lg md:text-4xl font-bold">Fruit Burst</h3>
                     </div>
                 </div>
-                <div class="form-control navbar-end">
-                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                <div class="flex items-center bg-white text-black rounded-full px-5">
+                    <input type="text" placeholder="Search"
+                        class="input focus:outline-none rounded-full w-24 md:w-auto" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
                 </div>
             </div>
         </nav>
@@ -142,8 +167,9 @@
         </section>
         <!-- Carousel or Slider ends here -->
         <!-- Various fruits starts here -->
-        <section class="absolute lg:bottom-20 lg:right-1/4 invisible lg:visible">
-            <div class="flex lg:gap-10 lg:px-20 justify-between items-center h-56 max-w-[1080px] bg-white shadow-md rounded-lg">
+        <section class="absolute lg:bottom-1 lg:right-1/4 invisible lg:visible">
+            <div
+                class="flex lg:gap-10 lg:px-20 justify-between items-center h-56 max-w-[1080px] bg-white shadow-md rounded-lg">
                 <div class=" text-center space-y-2">
                     <img src="./images/fruit1.png" alt="">
                     <p class="text-gray-700 text-lg">Black grapes</p>
@@ -166,7 +192,7 @@
                 </div>
             </div>
         </section>
-        <!-- Various fruits end here -->
+        <!-- Various fruits ends here -->
     </header>
     <main class="container mx-auto">
         <!-- Deals section starts here -->
@@ -257,7 +283,26 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-primary-color" />
                             </div>
                             <div>
-                                <a href="" class="text-primary-color">Details</a>
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="text-primary-color" onclick="my_modal_1.showModal()">Details</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <div class="flex flex-col items-center space-y-5">
+                                            <img src="images/fruit6.png" alt="">
+                                            <h4 class="font-extrabold text-3xl lg:text-4xl">Apple
+                                            </h4>
+                                            <p class="text-secondary-color">Professional employees are there
+                                                for you to pick the most amazing and fresh fruits.</p>
+                                        </div>
+                                        <div class="modal-action justify-center">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                            <button class="btn bg-primary-color text-white hover:bg-primary-color">
+                                                <a href="">Buy Now</a>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -279,7 +324,26 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-primary-color" />
                             </div>
                             <div>
-                                <a href="" class="text-primary-color">Details</a>
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="text-primary-color" onclick="my_modal_2.showModal()">Details</button>
+                                <dialog id="my_modal_2" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <div class="flex flex-col items-center space-y-5">
+                                            <img src="images/fruit7.png" alt="">
+                                            <h4 class="font-extrabold text-3xl lg:text-4xl">Orange
+                                            </h4>
+                                            <p class="text-secondary-color">Professional employees are there
+                                                for you to pick the most amazing and fresh fruits.</p>
+                                        </div>
+                                        <div class="modal-action justify-center">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                            <button class="btn bg-primary-color text-white hover:bg-primary-color">
+                                                <a href="">Buy Now</a>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -301,7 +365,26 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-primary-color" />
                             </div>
                             <div>
-                                <a href="" class="text-primary-color">Details</a>
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="text-primary-color" onclick="my_modal_3.showModal()">Details</button>
+                                <dialog id="my_modal_3" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <div class="flex flex-col items-center space-y-5">
+                                            <img src="images/fruit7.png" alt="">
+                                            <h4 class="font-extrabold text-3xl lg:text-4xl">Red Dragon
+                                            </h4>
+                                            <p class="text-secondary-color">Professional employees are there
+                                                for you to pick the most amazing and fresh fruits.</p>
+                                        </div>
+                                        <div class="modal-action justify-center">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                            <button class="btn bg-primary-color text-white hover:bg-primary-color">
+                                                <a href="">Buy Now</a>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -323,7 +406,26 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-primary-color" />
                             </div>
                             <div>
-                                <a href="" class="text-primary-color">Details</a>
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="text-primary-color" onclick="my_modal_4.showModal()">Details</button>
+                                <dialog id="my_modal_4" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <div class="flex flex-col items-center space-y-5">
+                                            <img src="images/fruit9.png" alt="">
+                                            <h4 class="font-extrabold text-3xl lg:text-4xl">Banana
+                                            </h4>
+                                            <p class="text-secondary-color">Professional employees are there
+                                                for you to pick the most amazing and fresh fruits.</p>
+                                        </div>
+                                        <div class="modal-action justify-center">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                            <button class="btn bg-primary-color text-white hover:bg-primary-color">
+                                                <a href="">Buy Now</a>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -342,7 +444,7 @@
                     <div class="">
                         <!-- teams tittle -->
                         <div class="max-w-[615px] mx-auto py-5">
-                            <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+                            <h1 class="mb-5 text-3xl md:text-5xl font-bold">Meet the team section</h1>
                             <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a
                                 piece
                                 of classical Latin literature from 45 BC, making it over 2000 years old.</p>
@@ -435,18 +537,119 @@
             </div>
         </section>
         <!-- Teams section ends here -->
+        <!-- Why choose us section starts here -->
+        <section class="my-5 lg:my-40">
+            <!-- Tittle -->
+            <div class="max-w-[615px] text-center  mx-auto py-5">
+                <h1 class="mb-5 text-3xl md:text-5xl font-bold">Why Choose Us</h1>
+                <p class="mb-5 text-secondary-color">Contrary to popular belief, is not simply random text. It has roots
+                    in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <div class="flex justify-around items-center flex-col w-full lg:flex-row">
+                <!-- left side -->
+                <div class="space-y-10 order-2 lg:order-1">
+                    <!-- left option 1 -->
+                    <div
+                        class="flex gap-3 flex-col lg:flex-row max-w-[400px] text-center lg:text-left justify-center items-center sm:py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/group 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">Dedicated Team</h2>
+                            <hr class="w-5/12 mx-auto lg:mx-0 border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <!-- left option 2 -->
+                    <div
+                        class="flex gap-3 flex-col lg:flex-row max-w-[400px] text-center lg:text-left justify-center items-center sm:py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/love 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">Fresh is Best</h2>
+                            <hr class="w-5/12 mx-auto lg:mx-0 border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <!-- left option 3 -->
+                    <div
+                        class="flex flex-col lg:flex-row gap-3 max-w-[400px] text-center lg:text-left justify-center items-center sm:py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/gift-box 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">Gift Certificates</h2>
+                            <hr class="w-5/12 mx-auto lg:mx-0 border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Why choose us image -->
+                <div class="py-5 lg:py-1 order-1 lg:order-2">
+                    <img src="./images/whychoose1.png" alt="">
+                </div>
+                <!-- right side -->
+                <div class="space-y-10 text-right order-3">
+                    <!-- right option 1 -->
+                    <div
+                        class="flex flex-col text-center lg:text-right lg:flex-row-reverse gap-3 max-w-[400px] justify-center items-center py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/fruit 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">Integrated Supplier</h2>
+                            <hr class="w-5/12 mx-auto lg:mx-[58%] border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <!-- right option 2 -->
+                    <div
+                        class="flex flex-col text-center lg:text-right lg:flex-row-reverse gap-3 max-w-[400px] justify-center items-center py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/ice-cream 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">Sustainable Practice</h2>
+                            <hr class="w-5/12 mx-auto lg:mx-[58%] border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <!-- right option 3 -->
+                    <div
+                        class="flex flex-col text-center lg:text-right lg:flex-row-reverse gap-3 max-w-[400px] justify-center items-center py-3 lg:py-0">
+                        <div class="border-8 border-[#1212121a] bg-[#1212121a] rounded-full">
+                            <img class="lg:w-12" src="./images/like 1.png" alt="">
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-extrabold py-2">The Benefits Only </h2>
+                            <hr class="w-5/12 mx-auto lg:mx-[58%] border border-gray-500">
+                            <p class="text-secondary-color">Professional employees are there for you to pick the most
+                                amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why choose us section ends here -->
     </main>
-
 </body>
+<!-- Footer section starts here -->
 <footer>
     <div class="footer footer-center p-10 bg-[#121212] text-white rounded">
         <div>
-            <div class="flex gap-2 items-center">
+            <div class="flex gap-2 items-center lg:pt-10">
                 <img src="./images/logo.png" alt="">
                 <h3 class="text-4xl font-bold">Fruit Burst</h3>
             </div>
         </div>
-        <div class="grid grid-cols-3 md:grid-cols-6">
+        <div class="flex justify-center gap-5 flex-wrap">
             <a class="link link-hover text-sm lg:text-lg font-semibold">Home</a>
             <a class="link link-hover text-sm lg:text-lg font-semibold">About Us</a>
             <a class="link link-hover text-sm lg:text-lg font-semibold">Shop</a>
@@ -455,16 +658,17 @@
             <a class="link link-hover text-sm lg:text-lg font-semibold">My Account</a>
         </div>
         <div>
-            <div class="space-x-3 md:space-x-5">
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-twitter" style="color: #ffffff;"></i></a>
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-youtube" style="color: #ffffff;"></i></a>
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                <a><i class="text-2xl lg::text-4xl fa-brands fa-apple" style="color: #ffffff;"></i></a>
+            <div class="space-x-3 md:space-x-7 lg:pb-10">
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                <a><i class="text-2xl lg:text-4xl fa-brands fa-apple" style="color: #ffffff;"></i></a>
             </div>
         </div>
     </div>
 </footer>
+<!-- Footer section ends here -->
 
 </html>
